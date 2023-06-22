@@ -12,3 +12,6 @@ class User(AbstractUser):
     last_name = models.CharField(max_length=50)
     birthdate = models.DateField(max_length=50, null=True)
     is_employee = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.username
