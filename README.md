@@ -1,77 +1,42 @@
-# M5 - Kenzie Buster
+# API de Gestão de Vendas de Filmes
 
-## Instalação dos pacotes de teste
+Este é o repositório da API de gestão de vendas de filmes. O objetivo desta API é proporcionar uma solução para gerenciar usuários, filmes e compras, substituindo processos manuais utilizando papel e planilhas desorganizadas. A API oferecerá recursos de autenticação e controle de acesso para diferentes tipos de usuários.
 
-- Verifique se os pacotes `pytest` e/ou `pytest-testdox` estão instalados globalmente em seu sistema:
-```shell
-pip list
-```
-- Caso seja listado o `pytest` e/ou `pytest-testdox` e/ou `pytest-django` em seu ambiente global, utilize os seguintes comando para desinstalá-los globalmente:
-```shell
-pip uninstall pytest
-```
+## Visão Geral do Projeto
 
-```shell
-pip uninstall pytest-testdox
-```
+Nesta entrega, serão desenvolvidas as seguintes funcionalidades e recursos:
 
-```shell
-pip uninstall pytest-django
-```
+1. Configuração do Projeto:
+   - Estruturação do projeto com arquivos essenciais.
+   - Configuração do ambiente virtual e dependências.
 
-A partir disso, prossiga com os passos:
+2. Customização de Usuário:
+   - Utilização do `AbstractUser` para personalização do modelo de usuário.
 
-1. Crie seu ambiente virtual:
-```bash
-python -m venv venv
-```
+3. Django Admin:
+   - Registro dos models no Django Admin para permitir uma interface de administração.
 
-2. Ative seu venv:
-```bash
-# LINUX:
-source venv/bin/activate
+4. Serializers Convencionais:
+   - Implementação de serializers para a manipulação dos dados.
 
-# WINDOWS:
-.\venv\Scripts\activate
+5. Validação Customizada:
+   - Definição de regras de validação personalizadas para garantir a integridade dos dados.
 
-# GIT BASH:
-source venv/Scripts/activate
-```
+6. Sobrescrita de Métodos de Serializers:
+   - Personalização de métodos nos serializers para atender requisitos específicos.
 
-3. Instale o pacote `pytest-testdox`:
-```shell
-pip install pytest-testdox pytest-django
-```
+7. Proteção de Rotas com JWT:
+   - Implementação de autenticação JWT para proteger as rotas sensíveis da API.
 
-5. Vá até o arquivo `pytest.ini` e modifique o nome do projeto `my_project_name.settings` para o nome do **seu_projeto**.settings (onde se encontra o settings.py)
+8. Permissões Customizadas do Django Rest Framework:
+   - Definição de permissões de acesso customizadas para diferentes tipos de usuário.
 
-4. Agora é só rodar os testes no diretório principal do projeto:
-```shell
-pytest --testdox -vvs
-```
+9. Tabela Pivô Customizada:
+   - Criação de tabela pivô personalizada para facilitar o gerenciamento de relacionamentos complexos.
 
+10. Campos de Escolha para Atributos de Model:
+    - Utilização de campos de escolha para garantir consistência nos atributos do modelo.
 
+11. Paginação com APIView:
+    - Implementação de paginação nos resultados da API usando APIView.
 
-## Rodando os testes de cada tarefa isoladamente
-
-Ao fim de cada tarefa será possível executar uma suite de testes direcionada àquela tarefa específica. Lembre-se de sempre estar com o **virtual enviroment (venv) ativado**.
-
-- Rodando testes da Tarefa 1:
-```python
-pytest --testdox -vvs tests/tarefas/t1/
-```
-
-- Rodando testes da Tarefa 2:
-```python
-pytest --testdox -vvs tests/tarefas/t2/
-```
-
-- Rodando testes da Tarefa 3:
-```python
-pytest --testdox -vvs tests/tarefas/t3/
-```
-
-- Rodando testes da Tarefa 4:
-```python
-pytest --testdox -vvs tests/tarefas/t4/
-```
